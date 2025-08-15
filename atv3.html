@@ -53,7 +53,61 @@
     background-color: #d3d3d3;
     border-radius: 5px;
     padding: 5px;
-  }  
+  }
+ 
+  label,textarea,select{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  input[type="text"],input[type="email"],input[type="date"],input[type="tel"],textarea{
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    border: 2px solid #6a0dad;
+    font-family: "Montserrat";
+    color: black;
+    padding: 10px;
+  }
+  #campo2{
+    margin-bottom: 10px;
+  }
+  #indicainput{
+    margin-bottom: 30px;
+  }
+  hr{
+    border: 1px solid #ccc;
+    margin-bottom: 12px;
+    width: 102.5%;
+    display: inline-block;
+  }
+  button{
+    display: flex;
+    margin: auto;
+    padding: 12px;
+    width: 20%;
+    text-align: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-family: "Montserrat";
+    background-color: #28a745;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    transition:ease 0.3s all;    
+  }
+
+  button:hover{
+    background-color: green;
+    cursor: pointer;
+  }
+  #linha1{
+    width: 90%;
+    
+    display: flex;
+    margin: 20px auto;
+  }
+
 </style>
   
 </head>
@@ -86,7 +140,7 @@
 
     </fieldset>
 
-    <fieldset>
+    <fieldset id="campo2">
       <legend>Dados do cartão</legend>
 
 
@@ -97,10 +151,11 @@
       <label for="cvc" id="codecard">Insira o código de segurança: </label>
       <input type="text" name="cvc" id="code-card" required minlength="3" maxlength="3" placeholder="123">
     </fieldset>
-
+      <hr id="linha1">
     <fieldset>
         <label for="indique" id="indicalabel">Indique seu amigo para o programa pelo número de telefone:</label>
         <input type="tel" name="indique" id="indicainput" placeholder="(99) 99999-9999">
+        <label for="dicas">Sua opinião importa! nos dê dicas para melhorarmos!</label>
         <textarea name="dicas" id="dica" rows="4" placeholder="Pontue melhoras para o projeto..."></textarea>
      
     </fieldset>
