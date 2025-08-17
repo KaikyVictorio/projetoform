@@ -7,8 +7,25 @@
 </head>
 <body>
 
-    <form action="POST">
-
+    <form action="#" method="post"novalidate>
+        <label for="nome">Insira seu nome completo</label>
+        <input type="text" name="nome" placeholder="Seu nome...">
+        <label for="email">Insira seu email</label>
+        <input type="email" name="email" placeholder="exemplo@dominio.com">
+        <label for="telefone">Insira seu telefone para contato:</label>
+        <input type="tel" name="telefone" placeholder="(99) 99999-9999">
+        <label for="checkin">Insira a data do Check-in</label>
+        <input type="date" name="email">
+        <input type="checkbox" name="checkbox">
+        <label for="checkbox">Estou ciente que o check-in é a partir das 14:00h</label>
+        <label for="checkout">Insira a data de check-out</label>
+        <input type="date" name="checkout">
+        <label for="guests">Número de hóspedes</label>
+        <input type="number" name="guests" min="1" max="5">
+        <label for="quarto">Tipo de quarto</label>
+        <select name="quarto" required>
+            <option value=""></option>
+        </select>
     </form>
 </body>
 </html>
