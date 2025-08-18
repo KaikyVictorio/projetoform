@@ -6,7 +6,101 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
+
+body {
+    background-color: #FAF3E0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+form {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    max-width: 500px;
+    width: 100%;
+    border-top: 8px solid #8B0000; 
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+    color: #8B0000; 
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #B22222;
+    box-shadow: 0 0 5px rgba(178, 34, 34, 0.4);
+}
+
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 6px;
+    margin-top: 10px;
+}
+
+
+button {
+    width: 100%;
+    background: #8B0000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+
+button:hover {
+    background: #B22222;
+    transform: scale(1.02);
+}
+    </style>
     <form action="#" method="post"novalidate>
         <label for="nome">Insira seu nome completo</label>
         <input type="text" name="nome" placeholder="Seu nome...">
@@ -24,8 +118,21 @@
         <input type="number" name="guests" min="1" max="5">
         <label for="quarto">Tipo de quarto</label>
         <select name="quarto" required>
-            <option value=""></option>
+            <option value="Selecione...">Selecione...</option>
+            <option value="Standard">Standard</option>
+            <option value="Luxo">Luxo</option>
+            <option value="suite">Suíte Master</option>
         </select>
+        <label for="coments">Deixe caso você tenha alguma necessidade especial:</label>
+        <textarea name="coments" placeholder="Insira o comentário..."></textarea>
+        <label for="pix">Insira o método de pagamento: </label>
+        <input type="radio" name="pix" id=""> Pix
+        <input type="radio" name="debito" id="">Débito
+        <input type="radio" name="credito" id="">Crédito
+        <label for="condicao">Aceito as condições e os termos de consentimento: </label>
+        <input type="checkbox" name="condicao" id="">
+        <button type="submit">Enviar</button>
+
     </form>
 </body>
 </html>
